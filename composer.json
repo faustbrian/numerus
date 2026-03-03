@@ -1,0 +1,76 @@
+{
+    "name": "cline/numerus",
+    "description": "Immutable numeric value object with chainable arithmetic operations and Laravel Number formatting",
+    "license": "MIT",
+    "keywords": [
+        "php",
+        "number",
+        "numeric",
+        "immutable",
+        "value-object",
+        "arithmetic",
+        "mathematics",
+        "percentage",
+        "formatting",
+        "laravel",
+        "intl",
+        "i18n",
+        "currency",
+        "locale"
+    ],
+    "authors": [
+        {
+            "name": "Brian Faust",
+            "email": "brian@cline.sh"
+        }
+    ],
+    "require": {
+        "php": "^8.5.0",
+        "ext-intl": "*",
+        "brick/math": "^0.14.8",
+        "illuminate/support": "^10.0 || ^11.0 || ^12.0 || ^13.0"
+    },
+    "require-dev": {
+        "cline/coding-standard": "^1.7.0",
+        "orchestra/testbench": "^8.0 || ^9.0 || ^10.9",
+        "symfony/var-dumper": "^6.0 || ^7.4.6"
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true,
+    "autoload": {
+        "psr-4": {
+            "Cline\\Numerus\\": "src"
+        },
+        "files": [
+            "src/helpers.php"
+        ]
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    },
+    "config": {
+        "allow-plugins": {
+            "dealerdirect/phpcodesniffer-composer-installer": true,
+            "ergebnis/composer-normalize": true,
+            "pestphp/pest-plugin": true
+        }
+    },
+    "scripts": {
+        "lint": "vendor/bin/ecs check --fix",
+        "refactor": "rector",
+        "test": [
+            "@test:lint",
+            "@test:type-coverage",
+            "@test:unit",
+            "@test:types",
+            "@test:refactor"
+        ],
+        "test:lint": "vendor/bin/ecs check",
+        "test:refactor": "rector --dry-run",
+        "test:type-coverage": "pest --parallel --min=80 --type-coverage",
+        "test:types": "phpstan",
+        "test:unit": "pest --parallel --min=80 --coverage"
+    }
+}
