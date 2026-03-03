@@ -970,7 +970,8 @@ final class Numerus implements JsonSerializable, Stringable
 
         foreach ($values as $resolved) {
             $native = new self($resolved)->value();
-            $counts[$native] = ($counts[$native] ?? 0) + 1;
+            $key = is_float($native) ? (string) $native : $native;
+            $counts[$key] = ($counts[$key] ?? 0) + 1;
         }
 
         return $counts;
@@ -1009,7 +1010,7 @@ final class Numerus implements JsonSerializable, Stringable
         foreach ($counts as $candidate => $count) {
             if ($count > $maxCount) {
                 $maxCount = $count;
-                $modes = [$candidate];
+                $modes = [self::create($candidate)->value()];
 
                 continue;
             }
@@ -1018,7 +1019,7 @@ final class Numerus implements JsonSerializable, Stringable
                 continue;
             }
 
-            $modes[] = $candidate;
+            $modes[] = self::create($candidate)->value();
         }
 
         sort($modes);
