@@ -9,6 +9,9 @@
 
 namespace Cline\Numerus\Exceptions;
 
+use Facade\IgnitionContracts\BaseSolution;
+use Facade\IgnitionContracts\ProvidesSolution;
+use Facade\IgnitionContracts\Solution;
 use InvalidArgumentException;
 
 /**
@@ -21,7 +24,7 @@ use InvalidArgumentException;
  *
  * @since 1.0.0
  */
-final class InvalidClampRangeException extends InvalidArgumentException implements NumerusException
+final class InvalidClampRangeException extends InvalidArgumentException implements NumerusException, ProvidesSolution
 {
     /**
      * Create an exception for when the minimum value exceeds the maximum.
@@ -31,5 +34,17 @@ final class InvalidClampRangeException extends InvalidArgumentException implemen
     public static function minGreaterThanMax(): self
     {
         return new self('Min value cannot be greater than max value');
+    }
+
+    public function getSolution(): Solution
+    {
+        /** @var BaseSolution $solution */
+        $solution = BaseSolution::create('Review package usage and configuration.');
+
+        return $solution
+            ->setSolutionDescription('Exception: '.$this->getMessage())
+            ->setDocumentationLinks([
+                'Package documentation' => 'https://github.com/cline/numerus',
+            ]);
     }
 }
