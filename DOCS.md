@@ -1,9 +1,11 @@
 ## Table of Contents
 
-1. Basic Usage (`docs/basic-usage.md`)
-2. Comparisons (`docs/comparisons.md`)
-3. Chaining (`docs/chaining.md`)
-4. Formatting (`docs/formatting.md`)
+1. [Basic Usage](#doc-docs-basic-usage) (`docs/basic-usage.md`)
+2. [Comparisons](#doc-docs-comparisons) (`docs/comparisons.md`)
+3. [Chaining](#doc-docs-chaining) (`docs/chaining.md`)
+4. [Formatting](#doc-docs-formatting) (`docs/formatting.md`)
+<a id="doc-docs-basic-usage"></a>
+
 Numerus is an immutable numeric value object that provides chainable arithmetic operations.
 
 ## Creating Numerus Instances
@@ -391,6 +393,8 @@ numerus(17)->isPrime(); // true
 numerus(20)->isPrime(); // false
 ```
 
+<a id="doc-docs-comparisons"></a>
+
 Numerus provides rich comparison operations for numeric values.
 
 ## Equality
@@ -587,6 +591,8 @@ function normalizePercentage(float $value): float
         ->value();
 }
 ```
+
+<a id="doc-docs-chaining"></a>
 
 One of Numerus's most powerful features is the ability to chain operations together, creating fluent and readable numeric computations.
 
@@ -838,6 +844,8 @@ $discounted = $base->multiplyBy(0.90);
 ```
 
 This allows you to derive multiple calculations from the same base value safely.
+
+<a id="doc-docs-formatting"></a>
 
 Numerus provides rich formatting capabilities inspired by Laravel's Number class, supporting internationalization and various number representations.
 

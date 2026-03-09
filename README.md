@@ -19,10 +19,10 @@ composer require cline/numerus
 
 ## Documentation
 
-- **[Basic Usage](cookbook/basic-usage.md)** - Core arithmetic and rounding operations
-- **[Comparisons](cookbook/comparisons.md)** - Comparison operations and type checking
-- **[Chaining](cookbook/chaining.md)** - Advanced chaining patterns and practical examples
-- **[Formatting](cookbook/formatting.md)** - Laravel Number formatting, localization, and parsing
+- **[Basic Usage](DOCS.md#doc-docs-basic-usage)** - Core arithmetic and rounding operations
+- **[Comparisons](DOCS.md#doc-docs-comparisons)** - Comparison operations and type checking
+- **[Chaining](DOCS.md#doc-docs-chaining)** - Advanced chaining patterns and practical examples
+- **[Formatting](DOCS.md#doc-docs-formatting)** - Laravel Number formatting, localization, and parsing
 
 ## Change log
 
