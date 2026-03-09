@@ -1,9 +1,9 @@
 ## Table of Contents
 
-1. [Basic Usage](#doc-docs-basic-usage) (`docs/basic-usage.md`)
-2. [Comparisons](#doc-docs-comparisons) (`docs/comparisons.md`)
-3. [Chaining](#doc-docs-chaining) (`docs/chaining.md`)
-4. [Formatting](#doc-docs-formatting) (`docs/formatting.md`)
+1. [Basic Usage](#doc-docs-basic-usage)
+2. [Comparisons](#doc-docs-comparisons)
+3. [Chaining](#doc-docs-chaining)
+4. [Formatting](#doc-docs-formatting)
 <a id="doc-docs-basic-usage"></a>
 
 Numerus is an immutable numeric value object that provides chainable arithmetic operations.
