@@ -29,7 +29,7 @@
         "ext-intl": "*",
         "brick/math": "^0.14.8",
         "facade/ignition-contracts": "^1.0.2",
-        "illuminate/support": "^10.0 || ^11.0 || ^12.0 || ^13.0"
+        "laravel/framework": "^10.0 || ^11.0 || ^12.0 || ^13.0"
     },
     "require-dev": {
         "cline/coding-standard": "^2.0.1",
